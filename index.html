@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Interactive Pricing Component</title>
+  <!-- Import Google Fonts and any other external CDN/style sheets here -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <!-- Project Stylesheet as Last Stylesheet-->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Link script here with DEFER attribute to tell browser to load file last. -->
+  <script src="script.js" defer></script>
+
+</head>
+<body>
+<div id="container">
+  <div id="first">
+    <p class="firstp">Simple, traffic-based pricing</p>
+    <p class="secondp">Sign-up for our 30-day trial. No credit card required.</p>
+  </div>
+  <div id="second">
+  <p id="views">100K Pageviews</p>
+  <input type="range" id="rang" min="0" max="32">
+  <p id="pricep">$<span id="changer">0</span> <span id="tog">/month</span></p>
+  <span class="sp1">Monthly Billing</span> <input name="monthbill" id="monthbill" type="checkbox">
+  <label for="monthbill"> </label>
+  <span class="sp1">Yearly Billing </span> <span class="percent"> <span class="minus">-</span>25%</span> <span class="discount">discount</span>
+  </div>
+  <div id="third">
+  <p><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>Unlimited websites</p>
+  <p><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>100% data ownership</p>
+  <p><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>Email reports</p>
+
+  <button>Start my trial</button>
+  </div>
+</div>
+</body>
+</html>
