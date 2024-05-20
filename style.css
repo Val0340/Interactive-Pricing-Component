@@ -1,0 +1,225 @@
+
+:root {
+  --bg-slider-full: #A5F3EB;
+  --bg-slider: #10D5C2;
+  --bg-discount: #FEECE7;
+  --text-discount: #FF8C66;
+  --text-cta: #BDCCFF;
+
+  --bg-component: #FFFFFF;
+  --bg-main: #FAFBFF;
+  --slider-empty: #EAEEFB;
+  --bg-toggle: #CDD7EE;
+  --text: #858FAD;
+  --bg-cta-text: #293356;
+
+  font-size: 15px;
+}
+
+
+#container{
+  display:flex;
+  flex-direction: column;
+  max-width: 375px;
+  font-family:Manrope;
+  font-size:15px;
+  padding: 50px 0px;
+  gap:2px;
+  
+}
+
+body{
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="449"><path fill="%23F1F5FE" fill-rule="evenodd" d="M0 0h1440v449H191.5C85.737 449 0 363.263 0 257.5V0z"/></svg>') ;
+  background-size: contain;
+  background-position: center;
+}
+#first{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  line-height: 0;
+  position:relative;
+  background:no-repeat url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="146" height="145"><g fill="none" fill-rule="evenodd" stroke="%23CFD8EF"><circle cx="63" cy="82" r="62.5"/><circle cx="105" cy="41" r="40.5"/></g></svg>') ;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 25px;
+}
+
+.firstp{
+  color:var(--bg-cta-text);
+  font-size: 20px;
+  font-weight: 800;
+  z-index: 1;
+}
+.secondp{
+  color:var(--text);
+  background-color: var(--bg-component);
+  font-size:12px;
+  font-weight:600;
+
+
+}
+button{
+  background-color: var(--bg-cta-text);
+  color:var(--text-cta);
+  height: 40px;
+  width: 150px;
+  border-radius: 20px;
+  font-size:10.5px;
+  margin: 25px 0;
+}
+#third{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  line-height: 0;
+  background-color: var(--bg-main);
+}
+#second{
+  background: var(--bg-main);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+ 
+}
+label{
+  height:17px;
+  width:40px;
+  background: var(--bg-toggle);
+  position:relative;
+  border-radius:200px;
+  display:inline-block;
+  margin-right: 10px;;
+}
+label::after{
+content:"";  
+height:13px;
+width:13px;
+position:absolute;
+background:var(--bg-component);
+border-radius:180px;
+top:2px;
+left:1px;
+}
+label:hover{
+  cursor:pointer;
+}
+#monthbill:checked + label{
+  background:var(--bg-slider);
+}
+#monthbill:checked + label::after{
+  left:38px;
+  transform: translateX(-100%);
+}
+.sp1{
+  color:var(--text);
+  font-size: 10.5px;
+  font-weight: 600;
+}
+.discount{
+  display: none;
+}
+.percent{
+  color:var(--text-discount);
+  background-color:var(--bg-discount);
+  border-radius:30px;
+  width:40px;
+  display:inline-block;
+  text-align: center;
+  font-size: 10.5px;
+}
+#third p{
+  color:var(--text);
+  font-size: 10.5px;
+  font-weight:600;
+}
+#second,#third{
+  padding:0 15px;
+}
+input[type="range"]{
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+
+  
+  box-sizing: border-box;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--slider-empty);
+  height: 0.5rem;
+  border-radius: 15px;
+  
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  appearance: none;
+  margin-top: -12px; 
+  height: 2rem;
+  width: 2rem ;   
+  border-radius:200px ;
+  background:no-repeat url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="13"><g fill="%2380FFF3" fill-rule="evenodd"><path d="M16 2.558v7.884a1 1 0 001.735.679l3.639-3.943a1 1 0 000-1.356l-3.64-3.943A1 1 0 0016 2.558zM6 2.558v7.884a1 1 0 01-1.735.679L.626 7.178a1 1 0 010-1.356l3.64-3.943A1 1 0 016 2.558z"/></g></svg>');
+  position: relative;
+  background-color: var(--bg-slider);
+  background-position: center;
+  
+}
+input[type="range"]:focus {
+  outline: none;
+}
+
+#monthbill{
+  visibility: hidden;
+  height: 0px;
+  width:0px;
+}
+button:hover{
+  cursor:pointer;
+}
+#views{
+  font-size: 12px;
+  font-family: Manrope;
+  font-weight: 600;
+  color: var(--text);
+}
+#pricep{
+  font-size: 25px;
+  color: var(--bg-cta-text);
+  font-weight: 800;
+}
+#tog{
+  font-size:12px;
+  color: var(--text);
+  font-weight:600;
+}
+
+@media (min-width:1000px){
+  #container{
+    width: 1440px;
+  }
+  #first,#second,#third{
+    width:100%;
+  }
+  #second{
+    flex-direction: row;
+    height:180px;
+  }
+  #third{
+    flex-wrap: wrap;
+    height: 100px;
+  }
+  #pricep{
+    order:2;
+  }
+  #rang{
+    order:3;
+  }
+  #views{
+    order:1;
+  }
+}
